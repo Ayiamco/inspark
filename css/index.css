@@ -1,5 +1,10 @@
 
 /* global styles and variables */
+:root{
+    --blue-1: rgb(61, 61, 224);
+    --gray-1:#fafafa;
+    --blue-2:rgb(2, 2, 37);
+}
 html{
     scroll-behavior: smooth;
 }
@@ -10,17 +15,16 @@ html{
 }    
 h2{
     font-family: "fira sans";
+    color: var(--blue-1);
+    font-size: 2em;
+    text-align: center;
 }
 img{
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
-:root{
-    --blue-1: rgb(61, 61, 224);
-    --gray-1:#fafafa;
-    --blue-2:rgb(2, 2, 37);
-}
+
 
 
 /* nav header styles */
@@ -103,10 +107,6 @@ nav a:hover{
     padding: 1em ;
     text-align: center;
 }
-#services h2{
-    color: var(--blue-1);
-    font-size: 2em;
-}
 .service{
     margin: 0.7em 0px ;
 }
@@ -126,13 +126,6 @@ nav a:hover{
     height: 60%;
     margin: auto;
 }
-#approach h2{
-    text-align: center;
-    color: var(--blue-1);
-    margin-top: 0.5em;
-    font-size: 2em;
-}
-
 /* why section styles */
 #why{
     padding: 0px 1em;
@@ -159,23 +152,12 @@ nav a:hover{
     text-align: center;
     background-color: var(--gray-1);
 }
-#clients h2{
-    color: var(--blue-1);
-    margin-bottom: 0.5em;
-    font-size: 2em;
-}
 
 /* contact section styles */
 #contact {
     margin: 1.5em 0px;
     padding: 1em;
 }
-#contact h2{
-    color: var(--blue-1);
-    font-size: 2em;
-    text-align: center;
-}
-
 .contact-form form{
     background-color: white;
     margin: 0.5em;
@@ -197,7 +179,7 @@ nav a:hover{
     height: 3em;
 }
 input[type="submit"]{
-    background-color:rgb(61, 61, 224);
+    background-color:var(--blue-1);
     color: white;
     font-weight: bold;
     font-size: 1.1em;
@@ -307,16 +289,36 @@ footer img{
         text-align: left;
     }
 
-    /* approach and why section styles */
-    #approach,#why{
-        text-align: center;
+    /* approach,clients and why section styles */
+    #approach,#why,#clients{
+        text-align: left;
         padding: 1em 3em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
     }
-    #approach p,#why p{
+    #approach h2,#why h2,#clients h2{
+        text-align: left;
+        margin-bottom: 0.5em;
+    }
+    #approach figure,
+    #why figure,
+    #clients figure,
+    #approach-bd,
+    #why aside,
+    #clients aside{
+        width: 45%;
+    }
+    #approach p,#why p, #clients p{
         font-size: 1em;
+        margin-top: 0px;
     }
-    /* clients secton styles */
-    #clients,#contact{
+    #clients{
+        flex-direction: row-reverse;
+    }
+    /* contact seccton  styles */
+    #contact{
         padding: 2em 3em;
         font-size: 1.5em;
     }
@@ -330,6 +332,7 @@ footer img{
     #top {
         padding: 0px 4rem;
         display: flex;
+        justify-content: space-between;
     }
     #mobile-nav{
         width: 30%;
@@ -345,7 +348,7 @@ footer img{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 70%;
+        width: 40%;
         height: 5em;
     }
     nav a{
@@ -394,72 +397,24 @@ footer img{
     }
 
     /* approach section styles */
-    #approach{
-        padding: 1em 10em;
-        display: flex;
-    }
-    #approach figure{
-        width: 100%;
-        height: 50%;
-    }
-    #approach-bd{
-        width: 70%;
-        margin-left: 2em;
-    }
-    #approach-bd h2{
-        margin-bottom: 0.5em;
-    }
-    #approach-bd p{
-        font-size: 1em;
-    }
-
-    /* why section styles */
-    #why{
-        padding: 2em 10em;
-        background-color: var(--gray-1);
-        margin: 0px;
-        display: flex ;
-    }
-    #why figure{
-        width: 40vw;
-        height: 50vh;
-    }
-    #why aside{
-        width: 30vw;
-        margin-right: 2em ;
-        text-align: left;
-    }
-    #why aside>p{
-        font-size: 1em;
-    }
-
-    /* clients section styles */
+    #approach,
+    #why,
     #clients{
-        display: flex;
-        background-color: white;
-        text-align: left;
         padding: 2em 10em;
-        margin: auto;
     }
-    #clients h2{
-        font-size: 1.5em;
+    #approach-bd p,
+    #why aside>p,
+    #clients p{
+        font-size: 1em;
     }
-    #clients aside{
-        width: 40%;
-        margin-right: 2em;
-        margin-top: 2em;
+    #why{
+        background-color: var(--gray-1);
     }
-    #clients figure{
-        width: 60%;
-        height: auto;
+    #clients{
+        background-color: white;
     }
-    #clients figure>img{
-        width: 100%;
-        height: 100%;
-    }
-    #clients aside>p{
-        font-size: 0.7em;
-    } 
+    
+    
 
     /* contact section styles */
     #contact{
