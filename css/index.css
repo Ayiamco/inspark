@@ -1,0 +1,499 @@
+
+/* global styles and variables */
+html{
+    scroll-behavior: smooth;
+}
+*{
+    padding: 0em;
+    margin: 0em;
+    box-sizing: border-box;
+}    
+h2{
+    font-family: "fira sans";
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+:root{
+    --blue-1: rgb(61, 61, 224);
+    --gray-1:#fafafa;
+    --blue-2:rgb(2, 2, 37);
+}
+
+
+/* nav header styles */
+#top{
+    background-color: white;  
+    padding: 0px 1em;
+}
+header i {
+    border: 0.5px solid black;
+    padding: 0.5em;
+    color: var(--gray-2);
+}
+#mobile-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0px;
+}
+.logo-container{
+    width: 40%;
+    height: 3em;
+}
+.logo-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+nav,#hide-nav{
+    display: none;
+}
+nav{
+    background-color: white;
+}
+nav a{
+    display: block;
+    padding-bottom: 0.5em;
+    text-decoration: none;
+    text-align: center;
+    margin: 0.5em 20vw;
+    
+}
+nav a:hover{
+    border-bottom: 1px solid var(--gray-2);
+}
+
+/* main section styles */
+#main{
+    padding: 1px 1em;
+}
+#main figure{
+    width: 80%;
+    height: 30vh;
+    margin: auto;
+}
+
+#main h1{
+    color: var(--blue-1);
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.btn-blue{
+    background-color: var(--blue-1);
+    font-size: 1.5em;
+    color: white;
+    padding: 0.5em 1em;
+    display: inline-block;
+    margin: 1em 0px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-blue:hover{
+    background-color: rgb(145, 145, 41);
+}
+
+/* services section styles */
+#services{
+    background-color: var(--gray-1);
+    padding: 1em ;
+    text-align: center;
+}
+#services h2{
+    color: var(--blue-1);
+    font-size: 2em;
+}
+.service{
+    margin: 0.7em 0px ;
+}
+#services figure{
+    width: 15vw;
+    height: 15vw;
+    margin: auto;
+}
+
+/* approach section styles */
+#approach{
+    margin: 1em 0px;
+    padding: 1em;
+} 
+#approach figure{
+    width: 60%;
+    height: 60%;
+    margin: auto;
+}
+#approach h2{
+    text-align: center;
+    color: var(--blue-1);
+    margin-top: 0.5em;
+    font-size: 2em;
+}
+
+/* why section styles */
+#why{
+    padding: 0px 1em;
+    text-align: center;
+    margin: 1em;
+}
+#why h2{
+    color: var(--blue-1);
+    margin: 0.5em 0px;
+    font-size: 2em;
+}
+.why-p2{
+    margin-bottom:1em ;
+}
+#why figure{
+    width: 90%;
+    margin: auto;
+}
+
+/* clients section styles */
+#clients{
+    padding:2em;
+    margin: 1em 0px;
+    text-align: center;
+    background-color: var(--gray-1);
+}
+#clients h2{
+    color: var(--blue-1);
+    margin-bottom: 0.5em;
+    font-size: 2em;
+}
+
+/* contact section styles */
+#contact {
+    margin: 1.5em 0px;
+    padding: 1em;
+}
+#contact h2{
+    color: var(--blue-1);
+    font-size: 2em;
+    text-align: center;
+}
+
+.contact-form form{
+    background-color: white;
+    margin: 0.5em;
+    padding: 2em;
+    border-radius: 27px;
+    border: 1px solid gray;
+    height: 18em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contact-form input{
+    display: block;
+    margin: auto;
+    margin-bottom: 0.5em;
+    padding: 0.5em 0.5em;
+    width: 90%;
+    box-sizing: border-box;
+    height: 3em;
+}
+input[type="submit"]{
+    background-color:rgb(61, 61, 224);
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+.contact-info-container{
+    margin: 1.5em 0px;
+    padding:1em
+}
+
+.contact-info-container figure{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5em;
+    
+}
+.contact-info-container figure>div{
+    width: 20%;
+    height: 2em;
+    
+    
+}
+.contact-info-container figure>figcaption{
+    width: 80%;
+}
+/* footer styles */
+footer{
+    background-color: var(--blue-2);
+    padding: 2em 1em;
+    text-align: center;
+}
+footer a{
+    color: white;
+    text-decoration: none;
+    height: 5em;
+    display: flex;
+    flex-direction:columns ;
+    justify-content: center;
+    align-items: center;
+}
+footer img{
+    width: 2em;
+    height: 2em;
+    margin: 0.5em;
+}
+.ft-center{
+    color: white;
+}
+.ft-right{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.ft-left a{
+    margin: 0px 0.5em;
+}
+.ft-left{
+    display: flex;
+    justify-content: center;
+}
+
+#btn-top i{
+    background-color: var(--blue-2);
+    border-radius: 50%;
+    height: 2em;
+    width: 2em;
+    display: inline;
+    text-align: center;
+    padding: 0.2em;
+    font-size: 1.5em;
+    color: white;
+    position: fixed;
+    right: 1em;
+    bottom: 12em;
+}
+
+@media only screen and (min-width:500px){
+    /* nav bar styles */
+    .logo-container{
+        width: 20%;
+    }
+
+    /* main section styles */
+    #main{
+        padding: 1em 3em;
+    }
+    #main figure{
+        width: 90%;
+        height: auto;
+    }
+
+    /* services section styles */
+    #services figure{
+        width: 3em;
+        height: 3em;
+    }
+    .services-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .service{
+        width: 40vw;
+        margin: 0.5em;
+    }
+    .service p{
+        text-align: left;
+    }
+
+    /* approach and why section styles */
+    #approach,#why{
+        text-align: center;
+        padding: 1em 3em;
+    }
+    #approach p,#why p{
+        font-size: 1em;
+    }
+    /* clients secton styles */
+    #clients,#contact{
+        padding: 2em 3em;
+        font-size: 1.5em;
+    }
+    .contact-info-container p{
+        font-size: 0.5em;
+    }
+}
+
+@media only  screen and (min-width:900px){
+    /* nav bar styles */
+    #top {
+        padding: 0px 4rem;
+        display: flex;
+    }
+    #mobile-nav{
+        width: 30%;
+        height: 5em;
+    }
+    #mobile-nav  i{
+        display: none;
+    }
+    #mobile-nav figure{
+        width: 50%;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 70%;
+        height: 5em;
+    }
+    nav a{
+        margin: 0.5em;
+        padding: 0.5em 1em;
+        color: var(--blue-1);
+    }
+    nav a:hover{
+        background-color:var(--gray-1);
+        border-bottom: 1px solid var(--blue-2);
+
+    }
+    /* main section styles*/
+    #main {
+        padding: 0em 4em;
+        display: flex;
+        margin-top: 3em;
+    }
+
+    #main aside{
+        width: 40%;
+    }
+    #main figure{
+        width: 50%;
+    }
+    /* services section styles */
+    #services {
+        padding: 2em 4em;
+    }
+    #services h2{
+        margin-bottom: 1.5em;
+    }
+    .service{
+        width: 30%;
+        text-align: left;
+        margin-bottom: 2em;
+    }
+    #services figure{
+        margin: 0px;
+        width: 5em;
+        margin-bottom: 1em;
+    }
+    #services img{
+        margin: 0px;
+        margin-left: -1em;
+    }
+
+    /* approach section styles */
+    #approach{
+        padding: 1em 10em;
+        display: flex;
+    }
+    #approach figure{
+        width: 100%;
+        height: 50%;
+    }
+    #approach-bd{
+        width: 70%;
+        margin-left: 2em;
+    }
+    #approach-bd h2{
+        margin-bottom: 0.5em;
+    }
+    #approach-bd p{
+        font-size: 1em;
+    }
+
+    /* why section styles */
+    #why{
+        padding: 2em 10em;
+        background-color: var(--gray-1);
+        margin: 0px;
+        display: flex ;
+    }
+    #why figure{
+        width: 40vw;
+        height: 50vh;
+    }
+    #why aside{
+        width: 30vw;
+        margin-right: 2em ;
+        text-align: left;
+    }
+    #why aside>p{
+        font-size: 1em;
+    }
+
+    /* clients section styles */
+    #clients{
+        display: flex;
+        background-color: white;
+        text-align: left;
+        padding: 2em 10em;
+        margin: auto;
+    }
+    #clients h2{
+        font-size: 1.5em;
+    }
+    #clients aside{
+        width: 40%;
+        margin-right: 2em;
+        margin-top: 2em;
+    }
+    #clients figure{
+        width: 60%;
+        height: auto;
+    }
+    #clients figure>img{
+        width: 100%;
+        height: 100%;
+    }
+    #clients aside>p{
+        font-size: 0.7em;
+    } 
+
+    /* contact section styles */
+    #contact{
+        display: flex;
+        background-color: var(--gray-1);
+        padding: 2em 10em;
+        align-items: center;
+        margin-bottom: 0px;
+        justify-content: center;
+    }
+    #contact h2{
+        font-size: 1.2em;
+    }
+    #contact input[type="submit"]{
+        height: 2em;
+        border: none;
+        font-size: 0.8em;
+        padding-top: 0.3;
+        padding-bottom: .3;
+    }
+    #contact figcaption{
+        font-size: 0.7em;
+    }
+
+    #contact-form{
+        width: 50vw;
+    }
+}
+
+@media only screen and (min-width:1100px){
+    #mobile-nav figure{
+        width: 40%;
+    }
+    #why,#approach{
+        padding: 2em 15em;
+    }
+}
